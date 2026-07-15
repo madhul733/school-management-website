@@ -16,7 +16,7 @@ const Topbar = () => {
 
         {/* PHONE */}
         <a
-          href="tel:   9781300975"
+          href="tel:9781300975"
           className="flex items-center gap-2 hover:opacity-80"
         >
           <FaPhoneAlt className="text-xs" />
@@ -55,14 +55,23 @@ const Topbar = () => {
           >
             <FaInstagram />
           </a>
+<a
+  href="https://twitter.com/"
+  target="_blank"
+  rel="noreferrer"
+  className="hover:scale-110 transition"
+>
+  <FaTwitter />
+</a>
 
-          <a href="#" className="hover:scale-110 transition">
-            <FaTwitter />
-          </a>
-
-          <a href="#" className="hover:scale-110 transition">
-            <FaYoutube />
-          </a>
+<a
+  href="https://youtube.com/"
+  target="_blank"
+  rel="noreferrer"
+  className="hover:scale-110 transition"
+>
+  <FaYoutube />
+</a>
 
         </div>
 

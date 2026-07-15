@@ -1,12 +1,11 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
   FaBus,
   FaMapMarkedAlt,
   FaShieldAlt,
+  FaUsers,
   FaUserShield,
   FaVideo,
-  FaUsers,
 } from "react-icons/fa";
 
 const transportFeatures = [

@@ -5,7 +5,6 @@ import {
   FaUserNurse,
   FaClinicMedical,
   FaShieldAlt,
-  FaProcedures,
   FaAmbulance,
   FaHandHoldingMedical,
   FaPlusCircle,

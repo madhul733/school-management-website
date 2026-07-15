@@ -11,8 +11,7 @@ import {
 import heroImg from "../assets/uploads/school.jpg";
 import chairpersonImg from "../assets/uploads/chairmen.jpg";
 
-/* ================= FOOTER ================= */
-import Footer from "./Footer";
+
 
 export default function ChairpersonMessage() {
 

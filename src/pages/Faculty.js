@@ -4,7 +4,6 @@ import {
   FaChalkboardTeacher,
   FaLightbulb,
   FaUsers,
-  FaBookOpen,
   FaGraduationCap,
 } from "react-icons/fa";
 

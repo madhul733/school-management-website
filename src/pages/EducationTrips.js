@@ -6,7 +6,6 @@ import {
   FaBookOpen,
   FaMapMarkedAlt,
   FaUserGraduate,
-  FaPlaneDeparture,
   FaCameraRetro,
   FaMountain,
 } from "react-icons/fa";

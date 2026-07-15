@@ -12,8 +12,6 @@ import Services from "./pages/Services";
 import VisionMission from "./pages/VisionMission";
 import Footer from "./pages/Footer";
 
-import PopUpModal from "./components/PopUpModal";
-
 import AboutUs from "./pages/AboutUs";
 import ChairMen from "./pages/ChairMen";
 import Director from "./pages/Director";

@@ -5,7 +5,6 @@ import {
   FaCalculator,
   FaChartLine,
   FaLandmark,
-  FaLaptopCode,
   FaClipboardCheck,
   FaBookOpen,
   FaUserGraduate,

@@ -6,8 +6,6 @@ import {
   FaShieldAlt,
   FaUserShield,
   FaVideo,
-  FaRoute,
-  FaClock,
   FaUsers,
 } from "react-icons/fa";
 

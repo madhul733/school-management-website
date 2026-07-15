@@ -7,7 +7,6 @@ import {
   FaBasketballBall,
   FaHeartbeat,
   FaMedal,
-  FaUsers,
   FaArrowRight,
   FaDumbbell,
 } from "react-icons/fa";

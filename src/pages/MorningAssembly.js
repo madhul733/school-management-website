@@ -7,7 +7,6 @@ import {
   FaMicrophoneAlt,
   FaFlag,
   FaSchool,
-  FaUsers,
   FaQuoteLeft,
 } from "react-icons/fa";
 

@@ -9,6 +9,7 @@ import {
   FaLightbulb,
   FaGraduationCap,
 } from "react-icons/fa";
+import middleImg from "../assets/uploads/middle.jpeg";
 
 const highlights = [
   {
@@ -130,7 +131,7 @@ const MiddleSchool = () => {
             <div className="relative overflow-hidden rounded-[55px] shadow-[0_35px_120px_rgba(0,0,0,0.15)] group">
 
               <img
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80"
+                src={middleImg}
                 alt="middle-school"
                 className="w-full h-[760px] object-cover group-hover:scale-105 transition duration-700"
               />

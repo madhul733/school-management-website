@@ -131,11 +131,11 @@ const Welcome = () => {
           >
 
             {/* IMAGE */}
-            <img
-              src={schoolImg}
-              alt="school"
-              className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-            />
+         <img
+  src={schoolImg}
+  alt="school"
+  className="w-full h-full object-contain bg-white group-hover:scale-105 transition duration-700"
+/>
 
             {/* OVERLAY */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#021427]/40 via-transparent to-transparent"></div>

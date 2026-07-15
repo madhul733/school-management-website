@@ -8,7 +8,8 @@ import {
 } from "react-icons/fa";
 
 /* ================= IMAGES ================= */
-import heroImg from "../assets/photo-1580582932707-520aed937b7b.avif";
+import heroImg from "../assets/uploads/school.jpg";
+import chairpersonImg from "../assets/uploads/chairmen.jpg";
 
 /* ================= FOOTER ================= */
 import Footer from "./Footer";
@@ -239,7 +240,7 @@ export default function ChairpersonMessage() {
                 <div className="overflow-hidden rounded-[35px] shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
 
                   <img
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop"
+                  src={chairpersonImg}
                     alt="Chairperson"
                     className="w-full h-[600px] object-cover hover:scale-105 transition duration-700"
                   />
@@ -309,8 +310,7 @@ export default function ChairpersonMessage() {
 
       </section>
 
-      {/* ================= FOOTER ================= */}
-      <Footer />
+     
 
     </div>
   );

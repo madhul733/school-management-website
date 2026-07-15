@@ -1,135 +1,117 @@
+// Classroom.jsx (PART 1)
+
 import React from "react";
 import { motion } from "framer-motion";
 import {
   FaChalkboardTeacher,
   FaDesktop,
-  FaLightbulb,
   FaUserGraduate,
-  FaSchool,
-  FaCouch,
+  FaChair,
+  FaArrowRight,
+  FaCheckCircle,
 } from "react-icons/fa";
 
-const features = [
-  {
-    title: "Smart Boards",
-    desc: "Digitally equipped classrooms for immersive and interactive learning.",
-    icon: <FaDesktop />,
-  },
-
-  {
-    title: "Expert Teachers",
-    desc: "Dedicated teachers provide individual attention and academic guidance.",
-    icon: <FaChalkboardTeacher />,
-  },
-
-  {
-    title: "Interactive Sessions",
-    desc: "Classroom sessions are designed to be practical, engaging and dynamic.",
-    icon: <FaLightbulb />,
-  },
-
-  {
-    title: "Student Motivation",
-    desc: "Positive environment encourages confidence and academic excellence.",
-    icon: <FaUserGraduate />,
-  },
-
-  {
-    title: "Modern Infrastructure",
-    desc: "Beautifully designed classrooms with world-class facilities.",
-    icon: <FaSchool />,
-  },
-
-  {
-    title: "Comfortable Seating",
-    desc: "Ergonomic furniture ensures comfort and better concentration.",
-    icon: <FaCouch />,
-  },
-];
+import heroImg from "../assets/uploads/school.jpg";
 
 const Classroom = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-[#f4f8fc] py-28">
+    <section className="bg-slate-50">
 
-      {/* BACKGROUND */}
-      <div className="absolute top-0 left-0 w-full h-[450px] bg-[#07294d] rounded-b-[90px]"></div>
+      {/* ================= HERO ================= */}
 
-      <div className="absolute top-20 right-[-100px] w-[300px] h-[300px] bg-cyan-400/20 blur-3xl rounded-full"></div>
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
 
-      <div className="absolute bottom-0 left-[-120px] w-[350px] h-[350px] bg-blue-300/20 blur-3xl rounded-full"></div>
-
-      {/* MAIN */}
-      <div className="max-w-[1600px] mx-auto px-6 relative z-10">
-
-        {/* ================= TOP SECTION ================= */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT */}
+
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: .7 }}
             viewport={{ once: true }}
           >
 
-            {/* SMALL TAG */}
-            <div className="inline-flex items-center gap-3 bg-white/10 border border-white/10 backdrop-blur-xl px-7 py-3 rounded-full mb-8">
+            <span className="inline-flex items-center rounded-full bg-blue-100 text-[#07294d] px-5 py-2 text-sm font-semibold tracking-wide">
 
-              <span className="text-cyan-300 text-lg">🏫</span>
+              CLASSROOMS
 
-              <p className="uppercase tracking-[5px] text-white text-sm font-bold">
-                Learning Spaces
-              </p>
+            </span>
 
-            </div>
+            <h1 className="mt-6 text-4xl lg:text-5xl font-extrabold leading-tight text-[#07294d]">
 
-            {/* HEADING */}
-            <h1 className="text-5xl md:text-7xl xl:text-8xl font-black text-white leading-[1.05]">
-
-              Modern
+              Inspiring Young Minds
               <br />
 
-              <span className="text-cyan-300">
-                Classrooms
+              Through
+
+              <span className="text-sky-600">
+
+                {" "}Modern Classrooms
+
               </span>
 
             </h1>
 
-            {/* LINE */}
-            <div className="w-36 h-[7px] bg-gradient-to-r from-cyan-300 to-blue-400 rounded-full mt-10 mb-10"></div>
+            <p className="mt-6 text-gray-600 text-lg leading-8 max-w-xl">
 
-            {/* TEXT */}
-            <p className="text-black text-xl leading-10 max-w-[700px] font-medium">
-
-              Our school provides a technologically advanced
-              and student-friendly classroom environment that
-              inspires excellence, creativity and meaningful learning.
+              Our classrooms are thoughtfully designed with smart
+              technology, experienced educators and a student-centric
+              environment that encourages creativity, confidence and
+              academic excellence.
 
             </p>
 
-            {/* STATS */}
-            <div className="grid grid-cols-2 gap-6 mt-14">
+            <div className="mt-8 flex flex-wrap gap-4">
 
-              <div className="bg-white/10 border border-white/10 backdrop-blur-xl rounded-[30px] p-7">
+              <button className="bg-[#07294d] hover:bg-[#0b3f74] transition text-white px-7 py-3 rounded-xl font-semibold flex items-center gap-2">
 
-                <h2 className="text-5xl font-black text-black mb-3">
-                  100%
-                </h2>
+                Explore Campus
 
-                <p className="text-black text-lg font-medium">
-                  Interactive Learning
+                <FaArrowRight />
+
+              </button>
+
+              <button className="border border-[#07294d] text-[#07294d] hover:bg-[#07294d] hover:text-white transition px-7 py-3 rounded-xl font-semibold">
+
+                Learn More
+
+              </button>
+
+            </div>
+
+            {/* MINI STATS */}
+
+            <div className="grid grid-cols-2 gap-5 mt-10">
+
+              <div className="bg-white rounded-2xl p-5 shadow-md">
+
+                <h3 className="text-3xl font-bold text-[#07294d]">
+
+                  40+
+
+                </h3>
+
+                <p className="text-gray-600 mt-2">
+
+                  Modern Classrooms
+
                 </p>
 
               </div>
 
-              <div className="bg-white/10 border border-white/10 backdrop-blur-xl rounded-[30px] p-7">
+              <div className="bg-white rounded-2xl p-5 shadow-md">
 
-                <h2 className="text-5xl font-black text-black mb-3">
+                <h3 className="text-3xl font-bold text-[#07294d]">
+
                   Smart
-                </h2>
 
-                <p className="text-black text-lg font-medium">
-                  Technology Enabled
+                </h3>
+
+                <p className="text-gray-600 mt-2">
+
+                  Digital Learning
+
                 </p>
 
               </div>
@@ -138,38 +120,29 @@ const Classroom = () => {
 
           </motion.div>
 
-          {/* RIGHT IMAGE */}
+          {/* RIGHT */}
+
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: .7 }}
             viewport={{ once: true }}
             className="relative"
           >
 
-            {/* MAIN IMAGE */}
-            <div className="relative overflow-hidden rounded-[50px] shadow-[0_40px_120px_rgba(0,0,0,0.25)]">
-
-              <img
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80"
-                alt="classroom"
-                className="w-full h-[700px] object-cover hover:scale-105 transition duration-700"
-              />
-
-            </div>
+            <img
+              src={heroImg}
+              alt=""
+              className="rounded-3xl h-[500px] w-full object-cover shadow-2xl"
+            />
 
             {/* FLOATING CARD */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="absolute -bottom-10 -left-8 bg-white rounded-[35px] p-8 shadow-[0_30px_80px_rgba(0,0,0,0.18)] max-w-[360px]"
-            >
 
-              <div className="flex items-start gap-5">
+            <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl p-6 max-w-sm">
 
-                <div className="w-18 h-18 rounded-[24px] bg-gradient-to-br from-cyan-500 to-blue-500 text-white flex items-center justify-center text-4xl p-5 shadow-xl">
+              <div className="flex gap-4">
+
+                <div className="w-14 h-14 rounded-xl bg-sky-500 flex items-center justify-center text-white text-2xl">
 
                   <FaDesktop />
 
@@ -177,14 +150,16 @@ const Classroom = () => {
 
                 <div>
 
-                  <h3 className="text-2xl font-black text-[#07294d] mb-3">
+                  <h3 className="font-bold text-xl text-[#07294d]">
+
                     Smart Learning
+
                   </h3>
 
-                  <p className="text-gray-700 leading-8">
+                  <p className="text-gray-600 mt-2 text-sm leading-6">
 
-                    Smart boards and digital tools
-                    make every lesson engaging and interactive.
+                    Digital classrooms with interactive boards,
+                    multimedia content and engaging teaching methods.
 
                   </p>
 
@@ -192,144 +167,212 @@ const Classroom = () => {
 
               </div>
 
-            </motion.div>
+            </div>
 
           </motion.div>
 
         </div>
 
-        {/* ================= MIDDLE SECTION ================= */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="bg-white rounded-[60px] p-10 md:p-16 shadow-[0_30px_120px_rgba(0,0,0,0.08)] mb-32 relative overflow-hidden"
-        >
+      </section>
 
-          {/* BG SHAPES */}
-          <div className="absolute top-[-100px] right-[-100px] w-[260px] h-[260px] bg-cyan-50 rounded-full"></div>
+      {/* ================= WHY OUR CLASSROOMS ================= */}
 
-          <div className="absolute bottom-[-100px] left-[-100px] w-[260px] h-[260px] bg-blue-50 rounded-full"></div>
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 pb-20">
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-            {/* LEFT */}
-            <div>
+          {/* IMAGE */}
 
-              <p className="uppercase tracking-[5px] text-cyan-500 font-bold mb-5">
-                Why Our Classrooms Stand Out
-              </p>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: .7 }}
+            viewport={{ once: true }}
+          >
 
-              <h2 className="text-5xl md:text-6xl font-black text-[#07294d] leading-[1.1] mb-8">
+            <img
+              src={heroImg}
+              alt=""
+              className="rounded-3xl h-[430px] object-cover w-full shadow-xl"
+            />
 
-                Designed For
-                <br />
-                Better Outcomes
+          </motion.div>
 
-              </h2>
+          {/* CONTENT */}
 
-              <div className="w-32 h-[6px] bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mb-10"></div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: .7 }}
+            viewport={{ once: true }}
+          >
 
-              <p className="text-gray-700 text-xl leading-10 mb-8">
+            <span className="text-sky-600 font-semibold uppercase tracking-[3px]">
 
-                Our classrooms are aesthetically designed
-                with ergonomic furniture and modern infrastructure
-                to provide comfort and focus during learning.
+              Why Choose Us
 
-              </p>
+            </span>
 
-              <p className="text-gray-700 text-xl leading-10">
+            <h2 className="text-4xl font-bold text-[#07294d] mt-4">
 
-                Skilled teachers combine innovation with
-                interactive teaching methodologies to make
-                every classroom session meaningful and engaging.
+              Designed For Better Learning
 
-              </p>
+            </h2>
+
+            <p className="text-gray-600 leading-8 mt-6">
+
+              Every classroom is designed to create an engaging
+              atmosphere where students learn with confidence,
+              collaborate effectively and achieve academic success.
+
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-5 mt-8">
+
+              <div className="flex items-start gap-3">
+
+                <FaCheckCircle className="text-sky-500 mt-1" />
+
+                <span>Smart Digital Boards</span>
+
+              </div>
+
+              <div className="flex items-start gap-3">
+
+                <FaCheckCircle className="text-sky-500 mt-1" />
+
+                <span>Experienced Teachers</span>
+
+              </div>
+
+              <div className="flex items-start gap-3">
+
+                <FaCheckCircle className="text-sky-500 mt-1" />
+
+                <span>Comfortable Seating</span>
+
+              </div>
+
+              <div className="flex items-start gap-3">
+
+                <FaCheckCircle className="text-sky-500 mt-1" />
+
+                <span>Interactive Learning</span>
+
+              </div>
+
+              <div className="flex items-start gap-3">
+
+                <FaCheckCircle className="text-sky-500 mt-1" />
+
+                <span>Student-Centric Approach</span>
+
+              </div>
+
+              <div className="flex items-start gap-3">
+
+                <FaCheckCircle className="text-sky-500 mt-1" />
+
+                <span>Creative Activities</span>
+
+              </div>
 
             </div>
 
-            {/* RIGHT IMAGE GRID */}
-            <div className="grid grid-cols-2 gap-6">
-
-              <img
-                src="https://images.unsplash.com/photo-1588072432904-843af37f03ed?auto=format&fit=crop&w=900&q=80"
-                alt=""
-                className="rounded-[30px] h-[250px] object-cover shadow-xl"
-              />
-
-              <img
-                src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=900&q=80"
-                alt=""
-                className="rounded-[30px] h-[250px] object-cover shadow-xl mt-14"
-              />
-
-              <img
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80"
-                alt=""
-                className="rounded-[30px] h-[250px] object-cover shadow-xl -mt-10"
-              />
-
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
-                alt=""
-                className="rounded-[30px] h-[250px] object-cover shadow-xl"
-              />
-
-            </div>
-
-          </div>
-
-        </motion.div>
-
-        {/* ================= FEATURES ================= */}
-        <div className="text-center mb-20">
-
-          <p className="uppercase tracking-[5px] text-cyan-500 font-bold mb-5">
-            Facilities & Environment
-          </p>
-
-          <h2 className="text-5xl md:text-6xl font-black text-[#07294d]">
-
-            Classroom Features
-
-          </h2>
+          </motion.div>
 
         </div>
 
-        {/* FEATURE GRID */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+      </section>
+            {/* ================= FEATURES ================= */}
 
-          {features.map((item, index) => (
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 pb-20">
+
+        <div className="text-center mb-12">
+
+          <span className="text-sky-600 font-semibold uppercase tracking-[3px]">
+            Classroom Facilities
+          </span>
+
+          <h2 className="text-4xl font-bold text-[#07294d] mt-4">
+            Everything Students Need
+          </h2>
+
+          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            Our classrooms combine modern technology, experienced faculty
+            and comfortable learning spaces to create an inspiring
+            educational environment.
+          </p>
+
+        </div>
+
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+          {[
+            {
+              icon: <FaDesktop />,
+              title: "Smart Boards",
+              desc: "Interactive digital boards make lessons engaging and visually effective.",
+            },
+
+            {
+              icon: <FaChalkboardTeacher />,
+              title: "Expert Teachers",
+              desc: "Highly qualified faculty providing individual attention to every learner.",
+            },
+
+            {
+              icon: <FaChair />,
+              title: "Comfortable Seating",
+              desc: "Modern furniture designed for comfort and better concentration.",
+            },
+
+            {
+              icon: <FaUserGraduate />,
+              title: "Student Focus",
+              desc: "Encouraging curiosity, creativity and academic excellence every day.",
+            },
+
+            {
+              icon: <FaDesktop />,
+              title: "Digital Learning",
+              desc: "Technology-enabled classrooms for collaborative and innovative learning.",
+            },
+
+            {
+              icon: <FaCheckCircle />,
+              title: "Safe Environment",
+              desc: "Clean, secure and student-friendly classrooms for a positive experience.",
+            },
+
+          ].map((item, index) => (
 
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
+              transition={{ delay: index * 0.08 }}
               viewport={{ once: true }}
-              whileHover={{ y: -12 }}
-              className="group bg-white rounded-[40px] p-10 shadow-[0_20px_80px_rgba(0,0,0,0.06)] hover:shadow-[0_25px_90px_rgba(0,0,0,0.1)] transition duration-500 relative overflow-hidden"
+              whileHover={{ y: -6 }}
+              className="bg-white rounded-3xl p-6 shadow-md hover:shadow-xl transition"
             >
 
-              {/* TOP SHAPE */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-50 rounded-bl-[80px]"></div>
-
-              {/* ICON */}
-              <div className="relative z-10 w-20 h-20 rounded-[28px] bg-gradient-to-br from-cyan-500 to-blue-500 text-white flex items-center justify-center text-4xl shadow-2xl mb-8">
+              <div className="w-14 h-14 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-2xl mb-5">
 
                 {item.icon}
 
               </div>
 
-              {/* TITLE */}
-              <h3 className="relative z-10 text-3xl font-black text-[#07294d] mb-5">
+              <h3 className="text-xl font-bold text-[#07294d]">
+
                 {item.title}
+
               </h3>
 
-              {/* DESC */}
-              <p className="relative z-10 text-gray-700 text-lg leading-9">
+              <p className="text-gray-600 mt-3 leading-7">
+
                 {item.desc}
+
               </p>
 
             </motion.div>
@@ -338,7 +381,106 @@ const Classroom = () => {
 
         </div>
 
-      </div>
+      </section>
+
+      {/* ================= STATS ================= */}
+
+      <section className="bg-[#07294d] py-16">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+
+            {[
+              {
+                number: "40+",
+                title: "Modern Classrooms",
+              },
+
+              {
+                number: "25:1",
+                title: "Student Ratio",
+              },
+
+              {
+                number: "100%",
+                title: "Interactive Learning",
+              },
+
+              {
+                number: "Digital",
+                title: "Smart Education",
+              },
+
+            ].map((item, index) => (
+
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-3xl p-7 text-center"
+              >
+
+                <h2 className="text-4xl font-extrabold text-[#07294d]">
+
+                  {item.number}
+
+                </h2>
+
+                <p className="text-gray-600 mt-3">
+
+                  {item.title}
+
+                </p>
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= CTA ================= */}
+
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+
+        <div className="bg-gradient-to-r from-[#07294d] to-[#0b5ed7] rounded-[32px] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-8">
+
+          <div>
+
+            <h2 className="text-4xl font-bold text-white">
+
+              Experience Learning Beyond
+              The Classroom
+
+            </h2>
+
+            <p className="text-blue-100 mt-4 max-w-xl leading-8">
+
+              We nurture young minds through innovative teaching,
+              advanced classroom technology and a supportive
+              learning environment.
+
+            </p>
+
+          </div>
+
+          <button className="bg-white text-[#07294d] hover:bg-slate-100 transition px-8 py-4 rounded-xl font-semibold flex items-center gap-2">
+
+            Explore Our Campus
+
+            <FaArrowRight />
+
+          </button>
+
+        </div>
+
+      </section>
 
     </section>
   );

@@ -9,10 +9,8 @@ import {
 
 /* ================= IMAGES ================= */
 import schoolImg from "../assets/Cambridge International School exterior view.png";
-import heroImg from "../assets/photo-1580582932707-520aed937b7b.avif";
+import heroImg from "../assets/uploads/school.jpg";
 
-/* ================= FOOTER ================= */
-import Footer from "./Footer";
 
 export default function HistoryOfSchool() {
 
@@ -349,8 +347,7 @@ export default function HistoryOfSchool() {
 
       </section>
 
-      {/* ================= FOOTER ================= */}
-      <Footer />
+    
 
     </div>
   );

@@ -8,6 +8,7 @@ import {
   FaFlask,
   FaUserFriends,
 } from "react-icons/fa";
+import primaryImg from "../assets/uploads/prim.jpeg";
 
 const highlights = [
   {
@@ -128,7 +129,7 @@ const PrimarySchool = () => {
 
               {/* IMAGE */}
               <img
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1400&auto=format&fit=crop"
+                src={primaryImg}
                 alt="primary-school"
                 className="w-full h-[720px] object-cover group-hover:scale-105 transition duration-700"
               />

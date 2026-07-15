@@ -44,6 +44,7 @@ import EducationTrips from "./pages/EducationTrips";
 import MorningAssembly from "./pages/MorningAssembly";
 import Value from "./pages/Value";
 import Contact from "./pages/Contact";
+import NurturingTalents from "./pages/NuturingTalents";
 
 
 // ================= COMMON LAYOUT =================
@@ -110,6 +111,7 @@ function HomePage() {
       <Hero />
       <Welcome />
       <Features />
+      <NurturingTalents/>
       <Services />
       <VisionMission />
 

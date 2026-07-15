@@ -7,11 +7,10 @@ import {
   FaQuoteLeft,
 } from "react-icons/fa";
 
-/* ================= IMAGES ================= */
-import heroImg from "../assets/photo-1580582932707-520aed937b7b.avif";
+import heroImg from "../assets/uploads/school.jpg";
+import directorImg from "../assets/uploads/director.jpg";
 
-/* ================= FOOTER ================= */
-import Footer from "./Footer";
+
 
 export default function DirectorMessage() {
 
@@ -239,7 +238,7 @@ export default function DirectorMessage() {
                 <div className="overflow-hidden rounded-[35px] shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
 
                   <img
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop"
+                    src={directorImg}
                     alt="Director"
                     className="w-full h-[600px] object-cover hover:scale-105 transition duration-700"
                   />
@@ -308,9 +307,6 @@ export default function DirectorMessage() {
         </div>
 
       </section>
-
-      {/* ================= FOOTER ================= */}
-      <Footer />
 
     </div>
   );

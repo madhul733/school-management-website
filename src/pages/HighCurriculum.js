@@ -10,6 +10,7 @@ import {
   FaBookOpen,
   FaUserGraduate,
 } from "react-icons/fa";
+import highImg from "../assets/uploads/senior.jpeg";
 
 const streams = [
   {
@@ -162,7 +163,7 @@ const HighSchool = () => {
             <div className="relative overflow-hidden rounded-[55px] shadow-[0_35px_120px_rgba(0,0,0,0.15)] group">
 
               <img
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80"
+                src={highImg}
                 alt="high-school"
                 className="w-full h-[760px] object-cover group-hover:scale-105 transition duration-700"
               />

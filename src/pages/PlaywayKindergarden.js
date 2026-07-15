@@ -8,6 +8,7 @@ import {
   FaMusic,
   FaSmile,
 } from "react-icons/fa";
+import playwayImg from "../assets/uploads/play-school1.jpg"
 
 const activities = [
   {
@@ -129,7 +130,7 @@ const PlaywayKindergarten = () => {
 
               {/* IMAGE */}
               <img
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1400&auto=format&fit=crop"
+                src={playwayImg}
                 alt="playway"
                 className="w-full h-[720px] object-cover group-hover:scale-105 transition duration-700"
               />

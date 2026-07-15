@@ -2,400 +2,369 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   FaFlask,
+  FaAtom,
   FaMicroscope,
   FaLaptopCode,
-  FaAtom,
-  FaChalkboardTeacher,
-  FaBrain,
-  FaShieldAlt,
-  FaRocket,
+  FaArrowRight,
+  FaCheckCircle,
 } from "react-icons/fa";
 
-const labs = [
-  {
-    title: "Physics Lab",
-    desc: "Modern apparatus and practical experiments help students understand scientific concepts with clarity.",
-    icon: <FaAtom />,
-  },
-
-  {
-    title: "Chemistry Lab",
-    desc: "Well-equipped chemistry laboratory for safe and interactive practical learning.",
-    icon: <FaFlask />,
-  },
-
-  {
-    title: "Biology Lab",
-    desc: "Advanced microscopes and specimens provide hands-on scientific exploration.",
-    icon: <FaMicroscope />,
-  },
-
-  {
-    title: "Computer Lab",
-    desc: "Technology-enabled computer labs with latest systems and internet facilities.",
-    icon: <FaLaptopCode />,
-  },
-
-  {
-    title: "Expert Guidance",
-    desc: "Experienced teachers guide students through practical and experimental learning.",
-    icon: <FaChalkboardTeacher />,
-  },
-
-  {
-    title: "Innovation & Research",
-    desc: "Students are encouraged to think creatively, experiment and innovate confidently.",
-    icon: <FaBrain />,
-  },
-];
+import labImg1 from "../assets/Cambridge International School exterior view.png";
+import labImg2 from "../assets/Cambridge International School exterior view.png";
+import labImg3 from "../assets/Cambridge International School exterior view.png";
 
 const Labs = () => {
   return (
-    <section className="relative overflow-hidden bg-[#f6faff] py-32">
+    <section className="bg-slate-50 overflow-hidden">
 
-      {/* BACKGROUND */}
-      <div className="absolute top-0 left-0 w-full h-[780px] bg-gradient-to-br from-[#041c38] via-[#07294d] to-[#0b3f75]"></div>
+      {/* ================= HERO ================= */}
 
-      <div className="absolute top-[-150px] right-[-100px] w-[450px] h-[450px] bg-cyan-400/10 rounded-full blur-3xl"></div>
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
 
-      <div className="absolute bottom-[-150px] left-[-100px] w-[450px] h-[450px] bg-blue-300/10 rounded-full blur-3xl"></div>
-
-      {/* GRID */}
-      <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:70px_70px]"></div>
-
-      {/* MAIN */}
-      <div className="max-w-[1650px] mx-auto px-6 relative z-10">
-
-        {/* ================= HERO ================= */}
-        <div className="grid lg:grid-cols-2 gap-20 items-center mb-40">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT */}
+
           <motion.div
-            initial={{ opacity: 0, x: -70 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: .7 }}
             viewport={{ once: true }}
           >
 
-            {/* TAG */}
-            <div className="inline-flex items-center gap-3 bg-white/10 border border-white/10 backdrop-blur-xl px-8 py-4 rounded-full mb-10 shadow-2xl">
+            <span className="inline-flex items-center rounded-full bg-cyan-100 text-cyan-700 px-5 py-2 text-sm font-semibold tracking-wide">
 
-              <span className="text-cyan-300 text-xl">🧪</span>
+              SCIENCE LABORATORIES
 
-              <p className="uppercase tracking-[6px] text-white text-sm font-bold">
-                Science & Innovation
-              </p>
+            </span>
 
-            </div>
+            <h1 className="mt-6 text-4xl lg:text-5xl font-extrabold leading-tight text-[#07294d]">
 
-            {/* HEADING */}
-            <h1 className="text-5xl md:text-7xl xl:text-8xl font-black text-white leading-[1.02]">
-
-              Advanced
+              Learn By
               <br />
 
-              <span className="text-cyan-300">
-                Laboratories
+              <span className="text-cyan-600">
+
+                Experimenting
+
               </span>
 
             </h1>
 
-            {/* UNDERLINE */}
-            <div className="w-40 h-[8px] bg-gradient-to-r from-cyan-300 via-cyan-400 to-blue-400 rounded-full mt-10 mb-12"></div>
+            <p className="mt-6 text-gray-600 text-lg leading-8 max-w-xl">
 
-            {/* TEXT */}
-            <p className="text-[#dbeafe] text-xl leading-10 max-w-[760px] font-medium">
-
-              Our school laboratories are designed to provide
-              students with practical exposure, scientific thinking
-              and hands-on learning experiences in a safe and
-              innovative environment.
+              Our modern laboratories provide students with hands-on
+              learning experiences where scientific concepts come alive
+              through practical experiments, innovation and discovery.
 
             </p>
 
-            {/* STATS */}
-            <div className="grid grid-cols-2 gap-7 mt-14">
+            <div className="flex flex-wrap gap-4 mt-8">
 
-              <motion.div
-                whileHover={{ y: -8 }}
-                className="bg-white/10 border border-white/10 backdrop-blur-xl rounded-[35px] p-8 shadow-[0_25px_60px_rgba(0,0,0,0.2)]"
-              >
+              <button className="bg-[#07294d] hover:bg-[#0b4277] transition text-white px-7 py-3 rounded-xl font-semibold flex items-center gap-2">
 
-                <h2 className="text-6xl font-black text-white mb-4">
-                  STEM
-                </h2>
+                Explore Labs
 
-                <p className="text-[#dbeafe] text-lg font-semibold">
-                  Practical Learning
-                </p>
+                <FaArrowRight />
 
-              </motion.div>
+              </button>
 
-              <motion.div
-                whileHover={{ y: -8 }}
-                className="bg-white/10 border border-white/10 backdrop-blur-xl rounded-[35px] p-8 shadow-[0_25px_60px_rgba(0,0,0,0.2)]"
-              >
+              <button className="border border-[#07294d] text-[#07294d] hover:bg-[#07294d] hover:text-white transition px-7 py-3 rounded-xl font-semibold">
 
-                <h2 className="text-6xl font-black text-white mb-4">
-                  Safe
-                </h2>
+                View Facilities
 
-                <p className="text-[#dbeafe] text-lg font-semibold">
-                  Modern Infrastructure
-                </p>
-
-              </motion.div>
+              </button>
 
             </div>
 
-          </motion.div>
+            {/* MINI STATS */}
 
-          {/* RIGHT IMAGE */}
-          <motion.div
-            initial={{ opacity: 0, x: 70 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
+            <div className="grid grid-cols-2 gap-5 mt-10">
 
-            {/* MAIN IMAGE */}
-            <div className="relative overflow-hidden rounded-[60px] shadow-[0_40px_140px_rgba(0,0,0,0.35)] group">
+              <div className="bg-white rounded-2xl shadow-md p-6">
 
-              <img
-                src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=1600&q=80"
-                alt="labs"
-                className="w-full h-[850px] object-cover group-hover:scale-105 transition duration-700"
-              />
+                <h2 className="text-3xl font-bold text-[#07294d]">
 
-              {/* OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#021427]/90 via-transparent to-transparent"></div>
+                  STEM
 
-              {/* CONTENT */}
-              <div className="absolute bottom-10 left-10 right-10 bg-white/10 border border-white/10 backdrop-blur-2xl rounded-[35px] p-8">
+                </h2>
 
-                <div className="flex items-start gap-6">
+                <p className="text-gray-600 mt-2">
 
-                  <div className="w-20 h-20 rounded-[28px] bg-gradient-to-br from-cyan-400 to-blue-500 text-white flex items-center justify-center text-4xl shadow-2xl flex-shrink-0">
+                  Practical Learning
 
-                    <FaRocket />
+                </p>
 
-                  </div>
+              </div>
 
-                  <div>
+              <div className="bg-white rounded-2xl shadow-md p-6">
 
-                    <h3 className="text-3xl font-black text-white mb-4">
-                      Hands-On Learning
-                    </h3>
+                <h2 className="text-3xl font-bold text-[#07294d]">
 
-                    <p className="text-[#dbeafe] text-lg leading-8">
+                  100%
 
-                      Students gain practical knowledge through
-                      experimentation, observation and innovation.
+                </h2>
 
-                    </p>
+                <p className="text-gray-600 mt-2">
 
-                  </div>
+                  Safe Environment
 
-                </div>
+                </p>
 
               </div>
 
             </div>
 
+          </motion.div>
+
+          {/* RIGHT */}
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: .7 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+
+            {/* IMAGE COLLAGE */}
+
+            <div className="grid grid-cols-2 gap-5">
+
+              <img
+                src={labImg1}
+                alt=""
+                className="rounded-3xl h-[260px] w-full object-cover shadow-xl"
+              />
+
+              <img
+                src={labImg2}
+                alt=""
+                className="rounded-3xl h-[340px] w-full object-cover shadow-xl mt-10"
+              />
+
+              <img
+                src={labImg3}
+                alt=""
+                className="rounded-3xl h-[220px] w-full object-cover shadow-xl -mt-16 col-span-2"
+              />
+
+            </div>
+
             {/* FLOATING CARD */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="absolute -bottom-12 -left-10 bg-white rounded-[35px] p-8 shadow-[0_30px_100px_rgba(0,0,0,0.18)] max-w-[350px]"
-            >
 
-              <div className="flex items-center gap-5">
+            <div className="absolute bottom-6 left-6 bg-white rounded-2xl shadow-xl p-6 max-w-xs">
 
-                <div className="w-18 h-18 rounded-[24px] bg-[#07294d] text-white flex items-center justify-center text-3xl p-5 shadow-xl">
+              <div className="flex gap-4">
 
-                  <FaShieldAlt />
+                <div className="w-14 h-14 rounded-xl bg-cyan-500 text-white flex items-center justify-center text-2xl">
+
+                  <FaFlask />
 
                 </div>
 
                 <div>
 
-                  <h3 className="text-2xl font-black text-[#07294d]">
-                    Safe Environment
+                  <h3 className="font-bold text-[#07294d] text-xl">
+
+                    Hands-On Learning
+
                   </h3>
 
-                  <p className="text-gray-500 mt-1">
-                    Secure • Practical • Advanced
+                  <p className="text-gray-600 text-sm mt-2 leading-6">
+
+                    Students understand concepts through observation,
+                    experimentation and innovation.
+
                   </p>
 
                 </div>
 
               </div>
 
-            </motion.div>
+            </div>
 
           </motion.div>
 
         </div>
 
-        {/* ================= CONTENT BLOCK ================= */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="relative overflow-hidden bg-white rounded-[65px] shadow-[0_35px_140px_rgba(0,0,0,0.08)] p-10 md:p-20 mb-36"
-        >
+      </section>
 
-          {/* SHAPES */}
-          <div className="absolute top-[-120px] right-[-120px] w-[300px] h-[300px] bg-cyan-50 rounded-full"></div>
+      {/* ================= ABOUT LABS ================= */}
 
-          <div className="absolute bottom-[-120px] left-[-120px] w-[300px] h-[300px] bg-blue-50 rounded-full"></div>
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 pb-20">
 
-          <div className="grid lg:grid-cols-2 gap-20 items-center relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            {/* LEFT */}
-            <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: .7 }}
+            viewport={{ once: true }}
+          >
 
-              <p className="uppercase tracking-[5px] text-cyan-500 font-bold mb-5">
-                Learning Through Experiments
-              </p>
+            <span className="uppercase tracking-[3px] text-cyan-600 font-semibold">
 
-              <h2 className="text-5xl md:text-6xl font-black text-[#07294d] leading-[1.1] mb-10">
+              Our Laboratories
 
-                Innovation,
-                <br />
-                Discovery & Science
+            </span>
 
-              </h2>
+            <h2 className="text-4xl font-bold text-[#07294d] mt-4">
 
-              <div className="w-36 h-[7px] bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mb-10"></div>
+              Where Curiosity Meets
+              Innovation
 
-              <p className="text-gray-700 text-xl leading-10 mb-8">
+            </h2>
 
-                Our laboratories encourage students to
-                develop scientific thinking, problem-solving
-                abilities and analytical skills through experiments.
+            <p className="text-gray-600 leading-8 mt-6">
 
-              </p>
+              The Physics, Chemistry, Biology and Computer Laboratories
+              are equipped with modern instruments and guided by
+              experienced faculty, enabling students to develop
+              analytical thinking, creativity and scientific skills.
 
-              <p className="text-gray-700 text-xl leading-10 mb-8">
+            </p>
 
-                Every lab is equipped with modern instruments,
-                digital resources and expert guidance to provide
-                meaningful practical learning experiences.
+            <div className="space-y-5 mt-8">
 
-              </p>
+              <div className="flex gap-3">
 
-              <p className="text-gray-700 text-xl leading-10">
+                <FaCheckCircle className="text-cyan-500 mt-1" />
 
-                Students learn by observing, experimenting
-                and innovating in a safe and inspiring atmosphere.
+                <span>Physics, Chemistry & Biology Labs</span>
 
-              </p>
+              </div>
 
-            </div>
+              <div className="flex gap-3">
 
-            {/* RIGHT IMAGES */}
-            <div className="grid grid-cols-2 gap-7">
+                <FaCheckCircle className="text-cyan-500 mt-1" />
 
-              <img
-                src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=900&q=80"
-                alt=""
-                className="rounded-[35px] h-[280px] object-cover shadow-2xl"
-              />
+                <span>Modern Computer Laboratory</span>
 
-              <img
-                src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80"
-                alt=""
-                className="rounded-[35px] h-[280px] object-cover shadow-2xl mt-16"
-              />
+              </div>
 
-              <img
-                src="https://images.unsplash.com/photo-1581093458791-9d42e0d0b1a1?auto=format&fit=crop&w=900&q=80"
-                alt=""
-                className="rounded-[35px] h-[280px] object-cover shadow-2xl -mt-12"
-              />
+              <div className="flex gap-3">
 
-              <img
-                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80"
-                alt=""
-                className="rounded-[35px] h-[280px] object-cover shadow-2xl"
-              />
+                <FaCheckCircle className="text-cyan-500 mt-1" />
+
+                <span>Latest Scientific Equipment</span>
+
+              </div>
+
+              <div className="flex gap-3">
+
+                <FaCheckCircle className="text-cyan-500 mt-1" />
+
+                <span>Safe & Well-Supervised Environment</span>
+
+              </div>
 
             </div>
 
-          </div>
+          </motion.div>
 
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: .95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: .7 }}
+            viewport={{ once: true }}
+          >
 
-        {/* ================= FEATURES ================= */}
-        <div className="text-center mb-24">
+            <img
+              src={labImg2}
+              alt=""
+              className="rounded-[32px] h-[450px] object-cover w-full shadow-xl"
+            />
 
-          <p className="uppercase tracking-[5px] text-cyan-500 font-bold mb-5">
-            Infrastructure & Facilities
-          </p>
-
-          <h2 className="text-5xl md:text-7xl font-black text-[#07294d] leading-tight">
-
-            Laboratory Highlights
-
-          </h2>
+          </motion.div>
 
         </div>
 
-        {/* GRID */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
+      </section>
+            {/* ================= LAB FACILITIES ================= */}
 
-          {labs.map((item, index) => (
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 pb-20">
+
+        <div className="text-center mb-14">
+
+          <span className="uppercase tracking-[3px] text-cyan-600 font-semibold">
+            Laboratory Facilities
+          </span>
+
+          <h2 className="text-4xl font-bold text-[#07294d] mt-4">
+            Explore Our Laboratories
+          </h2>
+
+          <p className="text-gray-600 mt-4 max-w-2xl mx-auto leading-8">
+            Our laboratories provide a perfect blend of practical
+            learning, innovation and technology to strengthen scientific
+            understanding and analytical thinking.
+          </p>
+
+        </div>
+
+        <div className="space-y-6">
+
+          {[
+            {
+              title: "Physics Laboratory",
+              desc: "Well-equipped laboratory with modern apparatus that enables students to understand physical concepts through observation and experimentation.",
+              icon: <FaAtom />,
+            },
+
+            {
+              title: "Chemistry Laboratory",
+              desc: "A safe and spacious laboratory where students perform experiments and explore chemical reactions with confidence.",
+              icon: <FaFlask />,
+            },
+
+            {
+              title: "Biology Laboratory",
+              desc: "Advanced microscopes, specimens and models help students understand biological sciences practically.",
+              icon: <FaMicroscope />,
+            },
+
+            {
+              title: "Computer Laboratory",
+              desc: "Modern computer systems with internet connectivity support coding, digital literacy and technology-based learning.",
+              icon: <FaLaptopCode />,
+            },
+
+          ].map((item, index) => (
 
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.08 }}
+              transition={{ delay: index * 0.08 }}
               viewport={{ once: true }}
-              whileHover={{ y: -15 }}
-              className="group relative overflow-hidden bg-white rounded-[45px] p-10 shadow-[0_25px_90px_rgba(0,0,0,0.06)] hover:shadow-[0_35px_110px_rgba(0,0,0,0.12)] transition duration-500"
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-3xl shadow-md hover:shadow-xl transition p-6 border border-slate-100"
             >
 
-              {/* TOP BAR */}
-              <div className="absolute top-0 left-0 w-full h-[7px] bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400"></div>
+              <div className="flex flex-col md:flex-row gap-6 items-start">
 
-              {/* BG SHAPE */}
-              <div className="absolute top-0 right-0 w-36 h-36 bg-cyan-50 rounded-bl-[100px]"></div>
-
-              {/* NUMBER */}
-              <h1 className="absolute top-5 right-8 text-[90px] font-black text-cyan-50">
-
-                0{index + 1}
-
-              </h1>
-
-              {/* CONTENT */}
-              <div className="relative z-10">
-
-                {/* ICON */}
-                <div className="w-22 h-22 rounded-[30px] bg-gradient-to-br from-cyan-400 to-blue-500 text-white flex items-center justify-center text-4xl shadow-2xl mb-8 p-5">
+                <div className="w-16 h-16 rounded-2xl bg-cyan-100 text-cyan-600 flex items-center justify-center text-3xl flex-shrink-0">
 
                   {item.icon}
 
                 </div>
 
-                {/* TITLE */}
-                <h3 className="text-3xl font-black text-[#07294d] mb-5 leading-tight">
-                  {item.title}
-                </h3>
+                <div>
 
-                {/* LINE */}
-                <div className="w-20 h-[5px] bg-cyan-200 rounded-full mb-7"></div>
+                  <h3 className="text-2xl font-bold text-[#07294d]">
 
-                {/* DESC */}
-                <p className="text-gray-700 text-lg leading-9">
-                  {item.desc}
-                </p>
+                    {item.title}
+
+                  </h3>
+
+                  <p className="text-gray-600 mt-3 leading-8">
+
+                    {item.desc}
+
+                  </p>
+
+                </div>
 
               </div>
 
@@ -405,7 +374,111 @@ const Labs = () => {
 
         </div>
 
-      </div>
+      </section>
+
+      {/* ================= STATS ================= */}
+
+      <section className="bg-[#07294d] py-16">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+
+            {[
+              {
+                number: "4+",
+                title: "Modern Laboratories",
+              },
+
+              {
+                number: "100%",
+                title: "Practical Learning",
+              },
+
+              {
+                number: "STEM",
+                title: "Innovation Focus",
+              },
+
+              {
+                number: "Safe",
+                title: "Learning Environment",
+              },
+
+            ].map((item, index) => (
+
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-3xl p-7 text-center"
+              >
+
+                <h2 className="text-4xl font-extrabold text-[#07294d]">
+
+                  {item.number}
+
+                </h2>
+
+                <p className="text-gray-600 mt-3">
+
+                  {item.title}
+
+                </p>
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= CTA ================= */}
+
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+
+        <div className="rounded-[30px] bg-gradient-to-r from-[#07294d] via-[#0a4f82] to-[#0891b2] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-8">
+
+          <div>
+
+            <span className="uppercase tracking-[3px] text-cyan-200 text-sm font-semibold">
+
+              Innovation Starts Here
+
+            </span>
+
+            <h2 className="text-4xl font-bold text-white mt-3">
+
+              Explore, Experiment & Discover
+
+            </h2>
+
+            <p className="text-blue-100 mt-4 leading-8 max-w-xl">
+
+              Our state-of-the-art laboratories encourage students
+              to think scientifically, solve problems creatively and
+              develop practical skills for the future.
+
+            </p>
+
+          </div>
+
+          <button className="bg-white hover:bg-slate-100 transition text-[#07294d] font-semibold px-8 py-4 rounded-xl flex items-center gap-2">
+
+            Explore Campus
+
+            <FaArrowRight />
+
+          </button>
+
+        </div>
+
+      </section>
 
     </section>
   );

@@ -8,10 +8,8 @@ import {
 } from "react-icons/fa";
 
 /* ================= IMAGE ================= */
-import heroImg from "../assets/photo-1580582932707-520aed937b7b.avif";
+import heroImg from "../assets/uploads/school.jpg";
 
-/* ================= FOOTER ================= */
-import Footer from "./Footer";
 
 export default function SchoolManagement() {
 
@@ -296,8 +294,6 @@ export default function SchoolManagement() {
 
       </section>
 
-      {/* ================= FOOTER ================= */}
-      <Footer />
 
     </div>
   );

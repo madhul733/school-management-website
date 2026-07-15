@@ -4,269 +4,399 @@ import {
   FaInstagram,
   FaYoutube,
   FaPhoneAlt,
-  FaUserTie,
-  FaImage,
-  FaQuestion,
   FaMapMarkerAlt,
   FaArrowRight,
+  FaGraduationCap,
 } from "react-icons/fa";
 
 import { MdEmail } from "react-icons/md";
 import { motion } from "framer-motion";
 
-export default function Footer() {
 
-  const quickLinks = [
-    "Virtual Tour",
-    "Canteen",
-    "Curriculum",
-    "Library",
-    "Teachers",
-    "Admissions",
-    "Activities",
-    "Contact Us",
-  ];
+export default function Footer(){
 
-  return (
-    <footer className="w-full overflow-hidden">
+const links=[
+"About School",
+"Academics",
+"Admissions",
+"Faculty",
+"School Facilities",
+"Contact Us"
+];
 
-      {/* ================= TOP STRIP ================= */}
-      <div className="bg-gradient-to-r from-[#facc15] via-[#fbbf24] to-[#facc15] py-8 px-6 md:px-20 relative">
 
-        {/* Glow */}
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-[2px]"></div>
+return(
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 rounded-[30px] overflow-hidden bg-white/20 backdrop-blur-lg shadow-[0_10px_40px_rgba(0,0,0,0.18)] relative z-10 border border-white/20">
+<footer className="bg-[#071d36] text-white">
 
-          {[
-            { title: "Career", icon: <FaUserTie /> },
-            { title: "Picture Gallery", icon: <FaImage /> },
-            { title: "What's New?", icon: <FaQuestion /> },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ y: -6 }}
-              transition={{ duration: 0.3 }}
-              className="relative group flex flex-col items-center justify-center py-9 cursor-pointer hover:bg-white/20 transition-all duration-300"
-            >
-
-              {index !== 2 && (
-                <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-20 w-[1px] bg-black/10"></div>
-              )}
-
-              <div className="w-16 h-16 rounded-2xl bg-white/40 flex items-center justify-center mb-4 group-hover:scale-110 transition duration-300 shadow-lg">
-
-                <div className="text-3xl text-[#0f172a]">
-                  {item.icon}
-                </div>
-
-              </div>
-
-              <p className="font-semibold text-[#0f172a] tracking-wide text-lg">
-                {item.title}
-              </p>
-
-            </motion.div>
-          ))}
-
-        </div>
-
-      </div>
-
-      {/* ================= MAIN FOOTER ================= */}
-      <div className="bg-[#07294d] text-white py-20 px-6 md:px-20 relative overflow-hidden">
-
-        {/* BACKGROUND GLOW */}
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#facc15]/10 blur-3xl rounded-full"></div>
-
-        <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-blue-400/10 blur-3xl rounded-full"></div>
-
-        <div className="grid lg:grid-cols-4 gap-14 relative z-10">
-
-          {/* ================= QUICK LINKS ================= */}
-          <div>
-
-            <h3 className="text-[#facc15] text-3xl font-bold mb-8">
-              Quick Links
-            </h3>
-
-            <div className="grid grid-cols-2 gap-y-4 gap-x-5">
-
-              {quickLinks.map((item, i) => (
-                <motion.div
-                  key={i}
-                  whileHover={{ x: 6 }}
-                  transition={{ duration: 0.25 }}
-                  className="flex items-center gap-2 text-gray-300 hover:text-[#facc15] transition duration-300 cursor-pointer text-[15px]"
-                >
-
-                  <FaArrowRight className="text-[11px]" />
-
-                  <span>{item}</span>
-
-                </motion.div>
-              ))}
-
-            </div>
-
-          </div>
-
-          {/* ================= BRAND ================= */}
-          <div className="flex flex-col items-center text-center justify-center">
-
-            <h2 className="text-4xl font-bold text-[#facc15] mb-5 leading-tight">
-              Cambridge
-              <br />
-              International
-              <br />
-              School
-            </h2>
-
-            <div className="w-20 h-[3px] bg-[#facc15] rounded-full mb-5"></div>
-
-            <p className="text-gray-300 leading-8 text-[15px] max-w-[280px]">
-              Empowering students with knowledge, values,
-              leadership and global vision for a brighter future.
-            </p>
-
-            {/* SOCIALS */}
-            <div className="flex gap-4 mt-8">
-
-              {[
-                {
-                  icon: <FaFacebookF />,
-                  link: "https://facebook.com",
-                },
-                {
-                  icon: <FaInstagram />,
-                  link: "https://instagram.com",
-                },
-                {
-                  icon: <FaYoutube />,
-                  link: "https://youtube.com",
-                },
-              ].map((social, i) => (
-                <motion.a
-                  key={i}
-                  href={social.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  whileHover={{
-                    y: -5,
-                    scale: 1.08,
-                  }}
-                  className="w-12 h-12 rounded-full bg-white/10 border border-white/10 backdrop-blur-md flex items-center justify-center hover:bg-[#facc15] hover:text-[#07294d] transition-all duration-300 shadow-lg"
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
-
-            </div>
-
-          </div>
-
-          {/* ================= CONTACT ================= */}
-          <div>
-
-            <h3 className="text-[#facc15] text-3xl font-bold mb-8">
-              Contact Us
-            </h3>
-
-            <div className="space-y-6 text-gray-300">
-
-              <motion.div
-                whileHover={{ x: 5 }}
-                className="flex items-center gap-4"
-              >
-
-                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-[#facc15]">
-                  <FaPhoneAlt />
-                </div>
-
-                <span className="text-[15px]">
-                  +91 97813 00975
-                </span>
-
-              </motion.div>
-
-              <motion.div
-                whileHover={{ x: 5 }}
-                className="flex items-center gap-4"
-              >
-
-                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-[#facc15]">
-                  <MdEmail />
-                </div>
-
-                <span className="text-[15px]">
-                  cisnakodar@gmail.com
-                </span>
-
-              </motion.div>
-
-              <motion.div
-                whileHover={{ x: 5 }}
-                className="flex items-start gap-4"
-              >
-
-                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-[#facc15] mt-1">
-                  <FaMapMarkerAlt />
-                </div>
-
-                <p className="text-[15px] leading-7">
-                  Cambridge International School,
-                  <br />
-                  Nakodar, Punjab, India
-                </p>
-
-              </motion.div>
-
-            </div>
-
-          </div>
-
-          {/* ================= MAP ================= */}
-          <div>
-
-            <h3 className="text-[#facc15] text-3xl font-bold mb-8">
-              Location & Map
-            </h3>
-
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-              className="rounded-[28px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.35)] border border-white/10"
-            >
-
-              <iframe
-                title="map"
-                src="https://maps.google.com/maps?q=nakodar&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="260"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
-
-            </motion.div>
-
-          </div>
-
-        </div>
-
-        {/* ================= COPYRIGHT ================= */}
-        <div className="border-t border-white/10 mt-16 pt-7 text-center text-gray-300 text-[15px] relative z-10">
-
-          © 2026{" "}
-          <span className="text-[#facc15] font-medium">
-            Cambridge International School
-          </span>{" "}
-          | All Rights Reserved
-
-        </div>
-
-      </div>
-
-    </footer>
-  );
+
+<div className="max-w-7xl mx-auto px-6 py-14">
+
+
+{/* HEADER */}
+
+<div className="
+flex
+flex-col
+md:flex-row
+items-center
+justify-between
+pb-8
+border-b
+border-white/10
+gap-6
+">
+
+
+<div className="flex items-center gap-4">
+
+
+<div className="
+w-16 h-16
+rounded-full
+border-2
+border-[#d4af37]
+flex
+items-center
+justify-center
+text-[#d4af37]
+text-3xl
+">
+
+<FaGraduationCap/>
+
+</div>
+
+
+<div>
+
+<h2 className="
+text-2xl
+md:text-3xl
+font-bold
+tracking-wide
+">
+
+Cambridge International School
+
+</h2>
+
+
+<div className="
+w-20
+h-[2px]
+bg-[#d4af37]
+my-2
+"></div>
+
+
+<p className="text-gray-400 text-sm">
+
+Nurturing Excellence • Building Future Leaders
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<div className="text-center md:text-right">
+
+
+<p className="text-[#d4af37] font-semibold">
+
+Affiliated & Trusted Education
+
+</p>
+
+
+<p className="text-gray-400 text-sm">
+
+Quality Learning Environment
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+{/* MAIN */}
+
+
+<div className="
+grid
+md:grid-cols-3
+gap-12
+py-10
+">
+
+
+
+{/* SCHOOL */}
+
+
+<div>
+
+
+<h3 className="
+text-lg
+font-bold
+text-[#d4af37]
+mb-5
+">
+
+Our School
+
+</h3>
+
+
+<p className="
+text-gray-300
+text-sm
+leading-7
+">
+
+Cambridge International School focuses on
+academic excellence, values, creativity and
+overall development of every student.
+
+</p>
+
+
+
+<div className="flex gap-3 mt-6">
+
+
+{
+[
+<FaFacebookF/>,
+<FaInstagram/>,
+<FaYoutube/>
+].map((icon,i)=>(
+
+<motion.div
+
+key={i}
+
+whileHover={{scale:1.1}}
+
+className="
+w-10
+h-10
+rounded-full
+bg-white/10
+flex
+items-center
+justify-center
+hover:bg-[#d4af37]
+hover:text-[#071d36]
+transition
+cursor-pointer
+"
+
+>
+
+{icon}
+
+</motion.div>
+
+
+))
+}
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+{/* LINKS */}
+
+
+
+<div>
+
+
+<h3 className="
+text-lg
+font-bold
+text-[#d4af37]
+mb-5
+">
+
+Quick Links
+
+</h3>
+
+
+<div className="space-y-3">
+
+
+{
+links.map((item,i)=>(
+
+
+<div
+
+key={i}
+
+className="
+flex
+gap-3
+items-center
+text-gray-300
+text-sm
+hover:text-[#d4af37]
+transition
+cursor-pointer
+"
+
+>
+
+<FaArrowRight className="text-xs"/>
+
+{item}
+
+</div>
+
+
+))
+}
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+{/* CONTACT */}
+
+
+<div>
+
+
+<h3 className="
+text-lg
+font-bold
+text-[#d4af37]
+mb-5
+">
+
+Get In Touch
+
+</h3>
+
+
+
+<div className="space-y-5 text-sm text-gray-300">
+
+
+
+<div className="flex gap-4 items-center">
+
+<FaPhoneAlt className="text-[#d4af37]"/>
+
++91 97813 00975
+
+</div>
+
+
+
+<div className="flex gap-4 items-center">
+
+<MdEmail className="text-[#d4af37]"/>
+
+cisnakodar@gmail.com
+
+</div>
+
+
+
+<div className="flex gap-4">
+
+<FaMapMarkerAlt className="text-[#d4af37] mt-1"/>
+
+<p>
+
+Nakodar, Punjab
+<br/>
+India
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+{/* BOTTOM */}
+
+
+<div className="
+border-t
+border-white/10
+pt-6
+text-center
+text-sm
+text-gray-400
+">
+
+
+© 2026 
+<span className="text-[#d4af37] font-semibold">
+ Cambridge International School
+</span>
+
+&nbsp; | &nbsp;
+
+Designed for Excellence
+
+
+</div>
+
+
+
+</div>
+
+
+</footer>
+
+)
+
 }

@@ -5,80 +5,54 @@ import {
   FaLightbulb,
   FaUsers,
   FaBookOpen,
+  FaGraduationCap,
 } from "react-icons/fa";
 
-/* ================= IMAGES ================= */
-import heroImg from "../assets/photo-1580582932707-520aed937b7b.avif";
-
-/* ================= FOOTER ================= */
-import Footer from "./Footer";
+import heroImg from "../assets/uploads/school.jpg";
+import facultyImg from "../assets/uploads/IMG-20180117-WA0042.jpg";
 
 export default function Faculty() {
-
-  const facultyMembers = [
-    {
-      name: "Mrs. Anjali Sharma",
-      role: "Senior English Faculty",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      name: "Mr. Rajiv Mehta",
-      role: "Mathematics Faculty",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      name: "Mrs. Simran Kaur",
-      role: "Science Faculty",
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
-    },
-  ];
 
   const highlights = [
     {
       icon: <FaChalkboardTeacher />,
-      title: "Expert Educators",
-      text: "Highly qualified faculty committed to excellence in teaching and learning.",
+      title: "Qualified Faculty",
+      text: "Highly qualified, experienced and committed educators dedicated to academic excellence.",
     },
     {
       icon: <FaLightbulb />,
-      title: "Innovative Teaching",
-      text: "Modern methodologies encouraging creativity and practical understanding.",
+      title: "Innovative Learning",
+      text: "Activity-based, interactive and student-centric teaching methodologies.",
     },
     {
       icon: <FaUsers />,
-      title: "Personal Attention",
-      text: "Healthy staff-student ratio ensuring guidance and mentorship.",
+      title: "Individual Attention",
+      text: "Healthy teacher-student ratio ensuring personal guidance for every learner.",
     },
   ];
 
   return (
-    <div className="w-full bg-[#f4f8fd] overflow-hidden">
+    <div className="w-full bg-[#f5f8fc] overflow-hidden">
 
-      {/* ================= HERO SECTION ================= */}
-      <section className="relative h-[650px] overflow-hidden">
+      {/* ================= HERO ================= */}
 
-        {/* HERO IMAGE */}
+      <section className="relative h-[620px] overflow-hidden">
+
         <motion.img
           initial={{ scale: 1.12 }}
           animate={{ scale: 1 }}
           transition={{ duration: 2 }}
           src={heroImg}
-          alt="faculty"
+          alt="Faculty"
           className="w-full h-full object-cover"
         />
 
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#021427]/95 via-[#07294d]/80 to-[#07294d]/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#031426]/95 via-[#07294d]/80 to-[#07294d]/35"></div>
 
-        {/* GLOW */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#facc15]/10 blur-3xl rounded-full"></div>
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#d4af37]/15 blur-[120px] rounded-full"></div>
 
-        {/* HERO CONTENT */}
         <motion.div
-          initial={{ opacity: 0, y: 70 }}
+          initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="absolute inset-0 flex items-center"
@@ -88,23 +62,26 @@ export default function Faculty() {
 
             <div className="max-w-[760px]">
 
-              <p className="uppercase tracking-[8px] text-[#facc15] text-sm md:text-lg mb-5 font-medium">
-                Dedicated Educators
+              <p className="uppercase tracking-[8px] text-[#facc15] font-semibold mb-5">
+                Cambridge International School
               </p>
 
-              <h1 className="text-white text-5xl md:text-7xl font-bold leading-[1.1]">
+              <h1 className="text-white text-5xl md:text-7xl font-black leading-[1.05]">
 
                 Our
                 <br />
+
                 Faculty
 
               </h1>
 
-              <div className="w-40 h-[5px] bg-[#facc15] rounded-full mt-8"></div>
+              <div className="w-36 h-[5px] bg-[#facc15] rounded-full mt-8"></div>
 
-              <p className="text-white/80 text-lg md:text-xl leading-9 mt-10 max-w-[680px]">
-                Inspiring excellence through innovation,
-                dedication, and student-centered learning.
+              <p className="text-white/80 text-lg leading-9 mt-8 max-w-[650px]">
+
+                A team of passionate educators inspiring knowledge,
+                creativity, confidence and lifelong learning.
+
               </p>
 
             </div>
@@ -115,97 +92,99 @@ export default function Faculty() {
 
       </section>
 
-      {/* ================= MAIN SECTION ================= */}
-      <section className="max-w-[1450px] mx-auto px-6 py-28">
+      {/* ================= MAIN ================= */}
 
-        {/* ================= MAIN CARD ================= */}
+      <section className="max-w-[1450px] mx-auto px-6 py-24">
+
         <motion.div
-          initial={{ opacity: 0, y: 80 }}
+          initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: .8 }}
           viewport={{ once: true }}
-          className="relative bg-white rounded-[45px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
+          className="bg-white rounded-[45px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,.08)]"
         >
 
-          {/* TOP STRIP */}
-          <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-[#facc15] via-[#fbbf24] to-[#facc15]"></div>
+          <div className="h-2 bg-gradient-to-r from-[#facc15] via-[#d4af37] to-[#facc15]"></div>
 
           <div className="grid lg:grid-cols-2">
 
-            {/* ================= LEFT CONTENT ================= */}
-            <div className="relative p-10 md:p-16 lg:p-20 overflow-hidden">
+            {/* ================= LEFT ================= */}
 
-              {/* Glow */}
+            <div className="relative p-10 md:p-16 lg:p-20">
+
               <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-[#facc15]/10 blur-3xl rounded-full"></div>
 
-              {/* ICON */}
-              <div className="w-24 h-24 rounded-[30px] bg-[#07294d] text-white flex items-center justify-center text-4xl shadow-xl mb-10 relative z-10">
-
-                <FaBookOpen />
-
-              </div>
-
-              {/* CONTENT */}
               <div className="relative z-10">
 
-                <p className="uppercase tracking-[6px] text-[#facc15] font-semibold mb-5">
+                <div className="w-24 h-24 rounded-[28px] bg-[#07294d] text-white flex items-center justify-center text-4xl shadow-xl mb-10">
+
+                  <FaGraduationCap />
+
+                </div>
+
+                <p className="uppercase tracking-[6px] text-[#d4af37] font-semibold mb-5">
+
                   Excellence In Teaching
+
                 </p>
 
-                <h2 className="text-5xl font-bold text-[#07294d] leading-tight mb-10">
+                <h2 className="text-5xl font-black text-[#07294d] leading-tight mb-10">
 
                   Dedicated Faculty
                   <br />
-                  Inspiring Future Leaders
+                  Inspiring Every Learner
 
                 </h2>
 
-                <div className="space-y-8 text-[19px] leading-[42px] text-[#4b5563]">
+                <div className="space-y-8 text-[18px] leading-[38px] text-[#4b5563]">
 
                   <p>
-                    At Cambridge International School, we are proud to
-                    have a team of highly qualified, competent, and
-                    deeply committed educators who continuously strive
-                    to create a positive and inspiring learning
-                    environment for every student.
+                    We have highly qualified, competent and committed
+                    faculty members who are passionate about nurturing
+                    young minds through excellence in education. Every
+                    teacher is professionally trained in activity-based
+                    learning and modern teaching methodologies that make
+                    classrooms engaging, interactive and student-centric.
                   </p>
 
                   <p>
-                    Our faculty members are professionally trained in
-                    activity-based learning and modern teaching
-                    methodologies that encourage participation,
-                    creativity, analytical thinking, and practical
-                    understanding.
+                    Lesson planning, classroom performance and
+                    contribution to co-curricular activities remain under
+                    the constant guidance and supervision of the
+                    Principal, who firmly believes that the quality of
+                    teaching and learning must be of the highest
+                    standard—day by day, hour by hour and lesson by
+                    lesson.
                   </p>
 
                   <p>
-                    Lesson planning, classroom performance, and
-                    contribution to co-curricular activities are
-                    consistently monitored under the guidance of the
-                    Principal to ensure the highest standards of
-                    teaching and learning.
+                    Our faculty comprises skilled, confident,
+                    enthusiastic and forward-thinking educators who
+                    inspire students to think creatively and
+                    independently. Rather than relying solely on the
+                    traditional "chalk-and-talk" approach, our teachers
+                    integrate innovative teaching strategies,
+                    experiential learning and self-motivated practices.
                   </p>
 
                   <p>
-                    We strongly believe that education should go beyond
-                    traditional “chalk-and-talk” methods. Therefore,
-                    our educators adopt innovative approaches and
-                    self-motivated learning techniques that help
-                    students discover their true potential.
+                    Cambridge International School is equally committed
+                    to the continuous professional growth of its
+                    educators through regular workshops, staff
+                    development programmes and training sessions focused
+                    on modern pedagogy, counselling, personality
+                    development and career guidance.
                   </p>
-
-                  <p>
-                    The school is equally committed to continuous
-                    faculty development through workshops, training
-                    sessions, and modern pedagogical practices focused
-                    on holistic growth.
-                  </p>
-
-                  <p>
-                    With a healthy staff-student ratio of 1:25, every
-                    learner receives personal attention, mentorship,
-                    and guidance supporting both academic excellence
-                    and personality development.
+                                    <p>
+                    Maintaining an ideal
+                    <span className="font-semibold text-[#07294d]">
+                      {" "}
+                      teacher–student ratio of 1:25
+                    </span>
+                    , we ensure that every learner receives individual
+                    attention, personal guidance and a supportive
+                    environment where they feel comfortable approaching
+                    teachers both inside and outside the classroom.
                   </p>
 
                 </div>
@@ -214,54 +193,58 @@ export default function Faculty() {
 
             </div>
 
-            {/* ================= RIGHT IMAGE SIDE ================= */}
-            <div className="relative bg-[#07294d] p-8 md:p-10 overflow-hidden flex items-center justify-center">
+            {/* ================= RIGHT IMAGE ================= */}
 
-              {/* Glow */}
-              <div className="absolute top-0 right-0 w-72 h-72 bg-[#facc15]/10 blur-3xl rounded-full"></div>
+            <div className="relative bg-[#07294d] p-8 lg:p-10 overflow-hidden flex items-center">
+
+              <div className="absolute top-0 right-0 w-[320px] h-[320px] bg-[#facc15]/10 rounded-full blur-3xl"></div>
 
               <motion.div
                 whileHover={{ y: -8 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: .3 }}
                 className="relative z-10 w-full"
               >
 
-                {/* GROUP PHOTO */}
-                <div className="overflow-hidden rounded-[35px] shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-white/10">
+                <div className="overflow-hidden rounded-[35px] shadow-[0_20px_60px_rgba(0,0,0,.35)]">
 
                   <img
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop"
-                    alt="Faculty Group"
+                    src={facultyImg}
+                    alt="Faculty"
                     className="w-full h-[620px] object-cover hover:scale-105 transition duration-700"
                   />
 
                 </div>
 
-                {/* INFO CARD */}
-                <div className="bg-white rounded-[28px] p-8 shadow-2xl -mt-12 mx-6 relative z-20">
+                {/* ================= INFO CARD ================= */}
+
+                <div className="bg-white rounded-[28px] p-8 shadow-2xl -mt-14 mx-6 relative z-20">
 
                   <div className="flex items-center justify-between">
 
                     <div>
 
+                      <p className="uppercase tracking-[4px] text-[#d4af37] text-xs font-semibold mb-2">
+                        Cambridge International School
+                      </p>
+
                       <h3 className="text-3xl font-bold text-[#07294d]">
-                        Cambridge Faculty
+                        Excellence in Teaching
                       </h3>
 
-                      <p className="text-[#facc15] font-semibold mt-2 text-lg tracking-wide">
-                        Excellence In Education
+                      <p className="text-gray-500 mt-2 leading-7">
+                        Inspiring students through knowledge,
+                        innovation and values.
                       </p>
 
                     </div>
 
-                    {/* RATIO */}
-                    <div className="w-20 h-20 rounded-3xl bg-[#07294d] text-white flex flex-col items-center justify-center shadow-lg">
+                    <div className="w-24 h-24 rounded-3xl bg-[#07294d] text-white flex flex-col items-center justify-center shadow-lg">
 
-                      <span className="text-2xl font-bold">
+                      <span className="text-3xl font-black">
                         1:25
                       </span>
 
-                      <span className="text-[11px] tracking-wide">
+                      <span className="text-xs tracking-widest uppercase">
                         Ratio
                       </span>
 
@@ -279,110 +262,161 @@ export default function Faculty() {
 
         </motion.div>
 
-        {/* ================= FACULTY MEMBERS ================= */}
+        {/* ================= ACHIEVEMENT STRIP ================= */}
+
+        <div className="grid md:grid-cols-4 gap-6 mt-20">
+
+          {[
+            ["Qualified", "Faculty"],
+            ["Activity Based", "Learning"],
+            ["Modern", "Pedagogy"],
+            ["Personal", "Attention"],
+          ].map((item, index) => (
+
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: .5,
+                delay: index * .1,
+              }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+              className="bg-white rounded-[28px] p-8 shadow-lg text-center border border-gray-100"
+            >
+
+              <h3 className="text-2xl font-black text-[#07294d]">
+                {item[0]}
+              </h3>
+
+              <p className="text-[#d4af37] font-semibold mt-2">
+                {item[1]}
+              </p>
+
+            </motion.div>
+
+          ))}
+
+        </div>
+                {/* ================= WHY OUR FACULTY ================= */}
+
         <div className="mt-24">
 
           <div className="text-center mb-16">
 
-            <p className="uppercase tracking-[6px] text-[#facc15] font-semibold mb-4">
-              Our Educators
+            <p className="uppercase tracking-[6px] text-[#d4af37] font-semibold mb-4">
+              Why Cambridge Faculty
             </p>
 
-            <h2 className="text-5xl font-bold text-[#07294d]">
-              Faculty Members
+            <h2 className="text-5xl md:text-6xl font-black text-[#07294d]">
+              Excellence Beyond Teaching
             </h2>
+
+            <div className="w-28 h-1 bg-[#d4af37] rounded-full mx-auto mt-6"></div>
 
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
+          <div className="grid lg:grid-cols-3 gap-8">
 
-            {facultyMembers.map((member, index) => (
+            {highlights.map((item, index) => (
+
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.15,
+                }}
                 viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-                className="bg-white rounded-[35px] overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.08)]"
+                whileHover={{
+                  y: -10,
+                }}
+                className="relative overflow-hidden bg-white rounded-[35px] p-10 shadow-[0_18px_50px_rgba(0,0,0,.08)] border border-gray-100 group"
               >
 
-                {/* IMAGE */}
-                <div className="overflow-hidden h-[420px]">
+                {/* TOP BAR */}
 
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover hover:scale-105 transition duration-700"
-                  />
+                <div className="absolute top-0 left-0 h-2 w-full bg-gradient-to-r from-[#facc15] via-[#d4af37] to-[#facc15]"></div>
 
-                </div>
+                {/* GLOW */}
 
-                {/* CONTENT */}
-                <div className="p-8 text-center">
+                <div className="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-[#facc15]/10 blur-3xl"></div>
 
-                  <h3 className="text-3xl font-bold text-[#07294d]">
-                    {member.name}
+                <div className="relative z-10">
+
+                  <div className="w-20 h-20 rounded-3xl bg-[#07294d] text-[#facc15] flex items-center justify-center text-3xl shadow-xl mb-8 group-hover:bg-[#facc15] group-hover:text-[#07294d] transition-all duration-500">
+
+                    {item.icon}
+
+                  </div>
+
+                  <h3 className="text-3xl font-bold text-[#07294d] mb-5">
+
+                    {item.title}
+
                   </h3>
 
-                  <p className="text-[#facc15] font-semibold mt-3 text-lg">
-                    {member.role}
+                  <p className="text-gray-600 text-[17px] leading-8">
+
+                    {item.text}
+
                   </p>
 
                 </div>
 
               </motion.div>
+
             ))}
 
           </div>
 
         </div>
 
-        {/* ================= HIGHLIGHTS ================= */}
-        <div className="grid md:grid-cols-3 gap-8 mt-24">
+        {/* ================= BOTTOM CTA ================= */}
 
-          {highlights.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="relative bg-white rounded-[35px] p-10 shadow-[0_15px_40px_rgba(0,0,0,0.08)] overflow-hidden"
-            >
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: .8 }}
+          viewport={{ once: true }}
+          className="mt-24 rounded-[40px] bg-gradient-to-r from-[#07294d] to-[#0b3d70] p-12 md:p-16 text-center overflow-hidden relative"
+        >
 
-              {/* Glow */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-[#facc15]/10 blur-2xl rounded-full"></div>
+          <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-[#facc15]/10 blur-3xl"></div>
 
-              <div className="relative z-10">
+          <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-[#facc15]/10 blur-3xl"></div>
 
-                <div className="w-20 h-20 rounded-3xl bg-[#07294d] text-white flex items-center justify-center text-3xl shadow-lg mb-8">
+          <div className="relative z-10">
 
-                  {item.icon}
+            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
 
-                </div>
+              Dedicated Teachers,
+              <br />
+              Confident Learners,
+              <br />
+              Brighter Futures.
 
-                <h3 className="text-3xl font-bold text-[#07294d] mb-5">
-                  {item.title}
-                </h3>
+            </h2>
 
-                <p className="text-gray-600 leading-8 text-[17px]">
-                  {item.text}
-                </p>
+            <p className="text-white/80 max-w-3xl mx-auto mt-8 text-lg leading-9">
 
-              </div>
+              At Cambridge International School, our educators are more
+              than teachers—they are mentors, motivators and lifelong
+              learners committed to nurturing every child with care,
+              innovation and academic excellence.
 
-            </motion.div>
-          ))}
+            </p>
 
-        </div>
+          </div>
+
+        </motion.div>
 
       </section>
 
-      {/* ================= FOOTER ================= */}
-      <Footer />
-
     </div>
+
   );
+
 }

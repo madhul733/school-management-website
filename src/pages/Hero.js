@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 import img1 from "../assets/Cambridge International School exterior view.png";
-import img3 from "../assets/PHOTO-2026-03-08-00-04-57.jpg";
-import img4 from "../assets/PHOTO-2026-03-17-08-34-28.jpg";
-import img5 from "../assets/PHOTO-2026-03-10-09-50-11.jpg";
+import img3 from "../assets/uploads/slider3.jpg";
+import img4 from "../assets/uploads/slider4.jpg";
+import img5 from "../assets/uploads/slider5.jpg";
 import img6 from "../assets/PHOTO-2026-03-08-00-04-58.jpg";
 
 const slides = [
@@ -36,11 +36,15 @@ const Hero = () => {
       >
         {slides.map((slide, index) => (
           <div key={index} className="min-w-full h-full overflow-hidden">
-            <img
-              src={slide.image}
-              alt=""
-              className="w-full h-full object-cover object-center scale-105 transition-transform duration-[6000ms]"
-            />
+           <img
+  src={slide.image}
+  alt=""
+  className={`w-full h-full object-cover transition-transform duration-[6000ms] ${
+    index === 0
+      ? "object-[center_25%] scale-100"
+      : "object-center scale-105"
+  }`}
+/>
           </div>
         ))}
       </div>

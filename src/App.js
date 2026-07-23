@@ -1,10 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
-
+import Header from "./components/Header";
 import TopBar from "./components/TopBar";
 import LogoBar from "./components/LogoOverlay";
+import PublicDisclosure from "./pages/PublicDisclosure"
 import NavBar from "./components/NavBar";
-
+import PopUpModal from "./components/PopUpModal";
 import Hero from "./pages/Hero";
 import Welcome from "./pages/Welcome";
 import Features from "./pages/Features";
@@ -49,8 +50,8 @@ import NurturingTalents from "./pages/NuturingTalents";
 function Layout({ children }) {
   return (
     <>
-      {/* <PopUpModal /> */}
-
+      <PopUpModal />
+<Header/>
       <TopBar />
       <LogoBar />
       <NavBar />
@@ -135,7 +136,7 @@ function App() {
       <Route path="/school-management" element={<Layout><SchoolManagement /></Layout>} />
       <Route path="/vision-mission" element={<Layout><VisionMission /></Layout>} />
       <Route path="/visiting-dignitaries" element={<Layout><VisitingDigitaries /></Layout>} />
-
+<Route path="/public-disclosure" element={<Layout><PublicDisclosure/></Layout>} />
       <Route path="/admission-form" element={<Layout><Admission /></Layout>} />
       <Route path="/age-criteria" element={<Layout><AgeCriteria /></Layout>} />
       <Route path="/procedure" element={<Layout><AdmissionProcess /></Layout>} />
